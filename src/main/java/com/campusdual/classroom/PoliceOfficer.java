@@ -16,4 +16,9 @@ public class PoliceOfficer extends Person {
 	public void setSquad(String squad) {
 		this.squad = squad;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+ "Squad: " +squad;
+	}
 }

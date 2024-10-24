@@ -17,4 +17,10 @@ public class Doctor extends Person {
 		this.specialization = specialization;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + ", Specialization: " + specialization;
+	}
 }
+
+

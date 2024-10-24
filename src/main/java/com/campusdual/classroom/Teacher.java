@@ -16,4 +16,9 @@ public class Teacher extends Person {
 	public void setArea(String area) {
 		this.area = area;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Area: " + area;
+	}
 }
