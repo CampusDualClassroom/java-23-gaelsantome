@@ -8,8 +8,7 @@ public class Exercise23 {
 
     public static Map<String, Person> createHashMap() {
         Map<String, Person> hashMap = new HashMap<>();
-
-
+        
         hashMap.put("person", new Person("John", "Smith"));
         hashMap.put("teacher", new Teacher("María", "Montessori", "Educación"));
         hashMap.put("police", new PoliceOfficer("Jake", "Peralta", "B-99"));
@@ -20,23 +19,15 @@ public class Exercise23 {
 
     public static Person addMapValue(Map<String, Person> map, String key, Person value) {
 
-        return map.put(key, value);
+         map.put(key, value);
+        return map.get(key);
     }
 
 
-    public static void printElementsAndIndex(List<String> customList) {
-        for (int i = 0; i < customList.size(); i++) {
-            String element = customList.get(i);
-            System.out.println("El índice: " + i + ", tiene el valor: " + element);
-        }
-    }
     public static void printMapValues(Map<String, Person> map) {
 
-        for (Map.Entry<String, Person> entry : map.entrySet()) {
-            String key = entry.getKey();
-            Person value = entry.getValue();
-
-            System.out.println( entry.getValue().getDetails());
+        for (Person person : map.values()) {
+            System.out.println(person.getDetails());
         }
     }
 
@@ -49,6 +40,7 @@ public class Exercise23 {
 
         Person newPolice = new PoliceOfficer("Charles", "Boyle", "B-99");
         Person addedValue = addMapValue(myMap, "police", newPolice);
+
 
         System.out.println("Valor añadido: " + addedValue);
 
